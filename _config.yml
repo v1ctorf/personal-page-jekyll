@@ -17,9 +17,9 @@ title: victorf
 email: mail@victorf.ch
 description: > # this means to ignore newlines until "baseurl:"
   I'm a software developer from Brazil and highly interested in blockchain 
-  technologies and cryptocurrencies. Currently, I'm working in a company located 
-  in São Paulo as full stack developer.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+  technologies and cryptocurrencies. Currently, I'm working as full stack web 
+  developer in a company located in São Paulo, Brazil.
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: v1ctorf
 github_username: v1ctorf
