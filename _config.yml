@@ -16,7 +16,7 @@
 title: victorf
 email: mail@victorf.ch
 description: > # this means to ignore newlines until "baseurl:"
-  I'm a software developer from Brazil and highly interested in blockchain 
+  I'm a software developer from Brazil, highly interested in blockchain 
   technologies and cryptocurrencies. Currently, I'm working as full stack web 
   developer in a company located in São Paulo, Brazil.
 baseurl: "" # the subpath of your site, e.g. /blog
