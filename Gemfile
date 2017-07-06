@@ -20,9 +20,8 @@ gem "minima", "~> 2.0"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
-   gem 'public_suffix', '~> 1.4.6'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :mingw_19, :jruby, :ruby]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :mingw_19, :jruby]
 
