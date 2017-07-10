@@ -1,3 +1,3 @@
-web: bundle exec jekyll build && jekyll serve -P $PORT --incremental
+web: bundle exec jekyll build
 console: echo console
 rake: echo rake
