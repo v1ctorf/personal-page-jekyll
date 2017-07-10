@@ -25,6 +25,3 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :mingw_19, :jruby]
 
-# https://github.com/jekyll/jekyll/issues/6189
-gem "rb-fsevent", "~> 0.9.0"
-
