@@ -2,7 +2,7 @@
 layout: post
 title:  "Finally, We Launch!"
 date:   2017-06-24 16:23:25 +0003
-categories: jekyll update development
+categories: en sw
 ---
 Initially, I just wanted to blog quickly, because I really want to deploy this page soon, but, in a more appropriated moment, I'll take a look 
 over other themes and more enhancements, as I realized that [Minima theme](https://jekyll.github.io/minima/) doesn't 
