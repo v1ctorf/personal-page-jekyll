@@ -29,3 +29,4 @@ theme: minima
 gems:
   - jekyll-feed
 google_analytics: UA-104984998-1
+future: true
