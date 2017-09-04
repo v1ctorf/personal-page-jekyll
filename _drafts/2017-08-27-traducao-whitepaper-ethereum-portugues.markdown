@@ -40,4 +40,16 @@ Sumário
 
 Introdução ao Bitcoin e Conceitos Relevantes
 --------------------------------------------
-The concept of decentralized digital currency, as well as alternative applications like property registries, has been around for decades. The anonymous e-cash protocols of the 1980s and the 1990s were mostly reliant on a cryptographic primitive known as Chaumian Blinding.[8] Chaumian Blinding provided these new currencies with high degrees of privacy, but their underlying protocols largely failed to gain traction because of their reliance on a centralized intermediary. In 1998, Wei Dai's b-money[9] became the first proposal to introduce the idea of creating money through solving computational puzzles as well as decentralized consensus, but the proposal was scant on details as to how decentralized consensus could actually be implemented. In 2005, Hal Finney introduced a concept of reusable proofs of work,[10] a system which uses ideas from b-money together with Adam Back's computationally difficult Hashcash[11] puzzles to create a concept for a cryptocurrency, but once again fell short of the ideal by relying on trusted computing as a backend. In 2009, a decentralized currency was for the first time implemented in practice by Satoshi Nakamoto,[1c][1d] combining established primitives for managing ownership through public key cryptography with a consensus algorithm for keeping track of who owns coins, known as "proof of work."
+
+História
+--------
+O conceito de moeda digital descentralizada, bem como suas aplicações no registro de propriedades, existe há décadas.
+Os protocolos anônimos de e-cash dos anos 80 e 90 eram muito dependentes de uma criptografia primitiva conhecida como Chaumian Blinding. 
+Essa criptografia viabilizava moedas com alto grau de privacidade, mas seus protocolos simplesmente não ganhavam relevância por confiarem em um intermediário centralizado.
+Em 1998, o b-money, de Wei Dai, foi o primeiro a propor emissão de dinheiro através da resolução de problemas computacionais e consenso descentralizado,
+mas apresentou poucos detalhes sobre como poderia ser implementado esse consenso. Em 2005, Hal Finney introduziu o conceito de provas de trabalho reutilizáveis, 
+um sistema que utiliza ideias do b-money e os problemas computacionais complexos do Hashcash de Adam Back,
+criando então um conceito de criptomoeda, mas mais uma vez estando aquém do ideal, pois dependia de computação confiável como backend.
+Em 2009, pela primeira vez uma moeda descentralizada foi implementada por Satoshi Nakamoto, 
+combinando princípios de gestão de propriedade através criptografia de chave pública com um algoritmo de consenso que mantém o registro de quem possui o dinheiro, 
+chamado "prova de trabalho".
