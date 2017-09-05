@@ -7,11 +7,7 @@ categories: pt-br ethereum
 
 [Link para a versão original (em inglês)](https://github.com/ethereum/wiki/wiki/White-Paper)
 
-https://github.com/ethereum/wiki/wiki/%5BPortuguese%5D-White-Paper
-
-
-Uma Próxima Geração de Plataforma para Aplicações Descentralizadas e Contratos Inteligentes
------------------------------------------------------------------------------------------
+### Uma Próxima Geração de Plataforma para Aplicações Descentralizadas e Contratos Inteligentes
 
 O desenvolvimento do Bitcoin, realizado por Satoshi Nakamoto entre 2008 e 2009, frequentemente 
 tem sido celebrado como uma revolução financeira e monetária, é o primeiro exemplo
@@ -33,16 +29,44 @@ qualquer um dos sistemas descritos anteriormente, bem como outros sistemas que n
 tenhamos sequer imaginado, simplesmente escrevendo sua lógica em poucas linhas de código.
 
 
-Sumário
--------
+### Sumário
 
-...
+* [Introdução ao Bitcoin e Conceitos Relevantes](#introduction-to-bitcoin-and-existing-concepts)
+    * [História](#history)
+    * [Bitcoin As A State Transition System](#bitcoin-as-a-state-transition-system)
+    * [Mining](#mining)
+    * [Merkle Trees](#merkle-trees)
+    * [Alternative Blockchain Applications](#alternative-blockchain-applications)
+    * [Scripting](#scripting)
+* [Ethereum](#ethereum)
+    * [Ethereum Accounts](#ethereum-accounts)
+    * [Messages and Transactions](#messages-and-transactions)
+    * [Ethereum State Transition Function](#ethereum-state-transition-function)
+    * [Code Execution](#code-execution)
+    * [Blockchain and Mining](#blockchain-and-mining)
+* [Applications](#applications)
+    * [Token Systems](#token-systems)
+    * [Financial derivatives](#financial-derivatives-and-stable-value-currencies)
+    * [Identity and Reputation Systems](#identity-and-reputation-systems)
+    * [Decentralized File Storage](#decentralized-file-storage)
+    * [Decentralized Autonomous Organizations](#decentralized-autonomous-organizations)
+    * [Further Applications](#further-applications)
+* [Miscellanea And Concerns](#miscellanea-and-concerns)
+    * [Modified GHOST Implementation](#modified-ghost-implementation)
+    * [Fees](#fees)
+    * [Computation And Turing-Completeness](#computation-and-turing-completeness)
+    * [Currency And Issuance](#currency-and-issuance)
+    * [Mining Centralization](#mining-centralization)
+    * [Escalabilidade](#scalability)
+* [Conclusão](#conclusion)
+* [Notes, References and Further Reading](#notes-references-and-further-reading)
 
-Introdução ao Bitcoin e Conceitos Relevantes
---------------------------------------------
 
-História
---------
+## Introdução ao Bitcoin e Conceitos Relevantes
+
+
+### História
+
 O conceito de moeda digital descentralizada, bem como suas aplicações no 
 registro de propriedades, existe há décadas. Os protocolos anônimos de e-cash 
 dos anos 80 e 90 eram muito dependentes de uma criptografia primitiva conhecida
@@ -78,8 +102,8 @@ por ele. A discussão sobre os relativos méritos das duas abordagens vai além 
 escopo desse artigo, mas é importante ter em conta que ambas podem ser 
 empregadas para estruturar uma criptomoeda.
 
-Bitcoin As A State Transition System
--------------------------------------
+### Bitcoin As A State Transition System
+
 
 traduzir a FIGURA
 
