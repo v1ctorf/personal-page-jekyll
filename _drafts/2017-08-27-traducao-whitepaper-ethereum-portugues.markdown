@@ -43,13 +43,44 @@ Introdução ao Bitcoin e Conceitos Relevantes
 
 História
 --------
-O conceito de moeda digital descentralizada, bem como suas aplicações no registro de propriedades, existe há décadas.
-Os protocolos anônimos de e-cash dos anos 80 e 90 eram muito dependentes de uma criptografia primitiva conhecida como Chaumian Blinding. 
-Essa criptografia viabilizava moedas com alto grau de privacidade, mas seus protocolos simplesmente não ganhavam relevância por confiarem em um intermediário centralizado.
-Em 1998, o b-money, de Wei Dai, foi o primeiro a propor emissão de dinheiro através da resolução de problemas computacionais e consenso descentralizado,
-mas apresentou poucos detalhes sobre como poderia ser implementado esse consenso. Em 2005, Hal Finney introduziu o conceito de provas de trabalho reutilizáveis, 
-um sistema que utiliza ideias do b-money e os problemas computacionais complexos do Hashcash de Adam Back,
-criando então um conceito de criptomoeda, mas mais uma vez estando aquém do ideal, pois dependia de computação confiável como backend.
-Em 2009, pela primeira vez uma moeda descentralizada foi implementada por Satoshi Nakamoto, 
-combinando princípios de gestão de propriedade através criptografia de chave pública com um algoritmo de consenso que mantém o registro de quem possui o dinheiro, 
-chamado "prova de trabalho".
+O conceito de moeda digital descentralizada, bem como suas aplicações no 
+registro de propriedades, existe há décadas. Os protocolos anônimos de e-cash 
+dos anos 80 e 90 eram muito dependentes de uma criptografia primitiva conhecida
+como Chaumian Blinding. Essa criptografia viabilizava moedas com alto grau de 
+privacidade, mas seus protocolos simplesmente não ganhavam relevância por 
+confiarem em um intermediário centralizado. Em 1998, o b-money, de Wei Dai, foi 
+o primeiro a propor emissão de dinheiro através da resolução de problemas 
+computacionais e consenso descentralizado, mas apresentou poucos detalhes sobre 
+como poderia ser implementado esse consenso. Em 2005, Hal Finney introduziu o 
+conceito de provas de trabalho reutilizáveis, um sistema que utiliza ideias do 
+b-money e os problemas computacionais complexos do Hashcash de Adam Back,
+criando então um conceito de criptomoeda, mas mais uma vez estando aquém do 
+ideal, pois dependia de computação confiável como backend. Em 2009, pela 
+primeira vez uma moeda descentralizada foi implementada por Satoshi Nakamoto, 
+combinando princípios de gestão de propriedade através criptografia de chave 
+pública com um algoritmo de consenso que mantém o registro de quem possui o 
+dinheiro, chamado "prova de trabalho".
+
+O mecanismo por trás da prova de trabalho foi um importante avanço, pois 
+solucionou dois problemas simultaneamente. Primeiramente, ele apresentou um 
+simples e relativamente efetivo algoritmo de consenso, permitindo que os nós de 
+uma rede concordassem coletivamente sobre um conjunto de atualizações do estado 
+do livro-contábil do Bitcoin. Finalmente, ele liberou o ingresso a esse 
+processo consensual, solucionando um problema político para decidir quem tem 
+influência no consenso, previnindo simultaneamente ataques Sybil. A prova de 
+trabalho substitui tanto a barreira formal para a participação, quanto a 
+exigência de estar registrado como uma entidade única em uma lista particular, 
+utilizando uma barreira mais econômica: o peso de um único nó no processo 
+consensual de votação é diretamente proporcional a seu poder computacional. 
+Desde então, uma abordagem alternativa chamada "prova de participação" tem sido 
+proposta, onde o peso do nó é proporcional ao saldo de criptomoedas possuidas 
+por ele. A discussão sobre os relativos méritos das duas abordagens vai além do 
+escopo desse artigo, mas é importante ter em conta que ambas podem ser 
+empregadas para estruturar uma criptomoeda.
+
+Bitcoin As A State Transition System
+-------------------------------------
+
+traduzir a FIGURA
+
+https://github.com/ethereum/wiki/wiki/White-Paper#bitcoin-as-a-state-transition-system
