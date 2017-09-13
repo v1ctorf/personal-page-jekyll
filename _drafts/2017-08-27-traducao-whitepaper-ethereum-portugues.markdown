@@ -102,9 +102,31 @@ por ele. A discussão sobre os relativos méritos das duas abordagens vai além 
 escopo desse artigo, mas é importante ter em conta que ambas podem ser 
 empregadas para estruturar uma criptomoeda.
 
-### Bitcoin As A State Transition System
+### Bitcoin Como Um Sistema de Transição de Estados
 
+    FIGURA
 
-traduzir a FIGURA
+Do ponto de vista técnico, o livro-contábil de uma criptomoeda como o Bitcoin 
+pode ser imaginado como um sistema de transição de estados, no qual se encontra
+um "estado" que consiste no status da propriedade de todos os Bitcoin existentes
+e uma "função de transição de estado" que recebe um estado e uma transação e 
+exibe um novo estado como resultado. Em um sistema bancário comum, por exemplo,
+esse estado é o balancete, uma transação é a requisição para movimentar `$X` de `A` 
+para `B` e a função de transição de estado deduz `$X` o valor da conta de `A` e 
+incrementa o valor da conta de `B` em `$X`. Em primeiro lugar, se a conta de `A` é 
+menor do que `$X`, a função de transição de estado retorna um erro. Portanto, 
+podemos definir:
+
+    APLICAR(S,TX) -> S' ou ERRO
+
+No sistema bancário definido acima:
+
+    APLICAR({ Alice: $50, Bob: $50 },"enviar $20 de Alice para Bob") = { Alice: $30, Bob: $70 }
+
+No entanto:
+
+    APLICAR({ Alice: $50, Bob: $50 },"enviar $70 de Alice para Bob") = ERRO 
+    
+The "state" in Bitcoin is the collection of all coins (technically, "unspent transaction outputs" or UTXO) that have been mined and not yet spent, with each UTXO having a denomination and an owner (defined by a 20-byte address which is essentially a cryptographic public key[Note 1]). A transaction contains one or more inputs, with each input containing a reference to an existing UTXO and a cryptographic signature produced by the private key associated with the owner's address, and one or more outputs, with each output containing a new UTXO for addition to the state.    
 
 https://github.com/ethereum/wiki/wiki/White-Paper#bitcoin-as-a-state-transition-system
