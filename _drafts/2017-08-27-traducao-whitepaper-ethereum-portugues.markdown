@@ -162,4 +162,4 @@ para um endereço seu, então o minerador poderá ficar com esse valor restante.
 
 
 
-https://github.com/ethereum/wiki/wiki/White-Paper#bitcoin-as-a-state-transition-system
+https://github.com/ethereum/wiki/wiki/White-Paper#mining
