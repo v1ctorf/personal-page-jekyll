@@ -11,7 +11,7 @@ support some nice little things, like URL to the main social networks, i18n, and
 Moreover, currently I'm learning about some wonderful tools which are helping me 
 to launch this page right now:
 * [Cloud9](https://c9.io/), 100% online IDE;
-* finally a have a [BitBucket](https://bitbucket.org/) repo - where I'm storing my page's source code;
+* finally I have a [BitBucket](https://bitbucket.org/) repo - where I'm storing my page's source code;
 * and [Jekyll](http://jekyllrb.com/), of course, which generated this page, allowing me to focus on content and deployment at this moment
 
 The purpose is more a page where I can show my projects than a blog. I'll blog when it is possible, but don't expect many posts, ok?  
