@@ -162,4 +162,34 @@ para um endereço seu, então o minerador poderá ficar com esse valor restante.
 
 
 
-https://github.com/ethereum/wiki/wiki/White-Paper#mining
+## Mineração
+
+![block_picture.jpg](https://raw.githubusercontent.com/ethereumbuilders/GitBook/master/en/vitalik-diagrams/block.png)
+
+A implementação de um serviço centralizado confiável seria trivial, pois ele poderia ser 
+implementado exatamente como o descrito, utilizando-se de um disco rígido de um servidor centralizado
+para manter a monitoração do estado. Porém, como estamos tentando construir um sistema monetário descentralizado,
+será necessário combinar o sistema de transação de estados com um sistema de consensos, 
+de maneira que seja garantido que todos concordem com a ordem das transações. O processo de 
+consenso descentralizado do Bitcoin exige que os nós de uma rede constantemente tentem
+produzir pacotes de transações chamados "blocos". A rede é instigada a produzir aproximadamente um bloco a cada
+dez minutos, onde cada bloco contém um timestamp, um nonce (um número arbitrário), 
+uma referência ao bloco anterior (por exemplo, através de um hash) e uma lista de todas
+as transações que tenham sido incluídas desde o bloco anterior. Ao longo do tempo, isso cria 
+uma cadeia de blocos crescente e persistente que constantemente é atualizada para 
+representar o último estado do livro-razão do Bitcoin.
+
+Conforme o paradigma mencionado, segue abaixo o algoritmo para verificar se um bloco é válido:
+
+1. Verificar se o bloco anterior é referenciado por um bloco válido e existente;
+2. Verificar se o timestamp do bloco é maior do que o do bloco anterior<sup>[2]</sup> e menor do que 2 horas no futuro;
+3. Verificar se a prova de trabalho do bloco é válida;
+4. Convencionar que o estado ao fim do bloco anterior seja `S[0]`;
+5. Vamos supor que `TX` seja a lista de transações de um bloco e que contenha `n` transações. Para cada `i` in `0...n-1`, temos `S[i+1] = SUBMETER(S[i],TX[i])`. Se alguma aplicação retornar um erro, interrompa a execução e retorna `FALSO`;
+6. Retornar `VERDADEIRO` e registrar `S[n]` como o estado ao fim desse bloco;
+
+
+Essentially, each transaction in the block must provide a valid state transition from what was the canonical state before the transaction was executed to some new state. Note that the state is not encoded in the block in any way; it is purely an abstraction to be remembered by the validating node and can only be (securely) computed for any block by starting from the genesis state and sequentially applying every transaction in every block. Additionally, note that the order in which the miner includes transactions into the block matters; if there are two transactions A and B in a block such that B spends a UTXO created by A, then the block will be valid if A comes before B but not otherwise.
+
+The one validity condition present in the above list that is not found in other systems is the requirement for "proof of work". The precise condition is that the double-SHA256 hash of every block, treated as a 256-bit number, must be less than a dynamically adjusted target, which as of the time of this writing is approximately 2187. The purpose of this is to make block creation computationally "hard", thereby preventing sybil attackers from remaking the entire blockchain in their favor. Because SHA256 is designed to be a completely unpredictable pseudorandom function, the only way to create a valid block is simply trial and error, repeatedly incrementing the nonce and seeing if the new hash matches.
+
